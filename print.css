@@ -1,0 +1,178 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="//www.w3.org/1999/xhtml" lang="en">
+	<head>
+	    <title>UVU Login Service</title>
+      <base href="/cas/;jsessionid=9CA34AD7A30EC551C9B2142357BA3303">
+        <!-- header css here -->
+<link type="text/css" rel="stylesheet" href="themes/wds_template/styleMobile.css" />
+<link type="text/css" rel="stylesheet" href="themes/wds_template/styleTablet.css" />
+<link type="text/css" rel="stylesheet" href="themes/wds_template/style.css" />
+<link type="text/css" rel="stylesheet" href="themes/wds_template/bootstrap.css" />
+<link type="text/css" rel="stylesheet" media="print" href="themes/wds_template/css/print.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+        <link type="text/css" rel="stylesheet" href="/cas/themes/wds_template/casmyuvu.css;jsessionid=9CA34AD7A30EC551C9B2142357BA3303"/>
+      	<link type="text/css" rel="stylesheet" href="//www.uvu.edu/lib/css/casmyuvu.css" />
+      	      <!-- header javascript here -->
+<script language="JavaScript" type="text/javascript" src="js/modernizr.js"> </script>
+<script src="js/jquery.min.js"></script>
+
+
+   </head>
+   <body>
+      <div id="wrapper" class="clean-template">
+         <div id="slideMenu">
+         </div>
+         <div id="container">
+            <div id="lHeaderShadow"></div>
+            <div id="rHeaderShadow"></div>
+            <div id="header">
+               <div id="logoAndTitle">
+                  				<div id="logo"><a href="http://www.uvu.edu/">&nbsp;</a></div>
+
+                  <div id="pageTitle">
+                    <p><a href="#">
+                           <span>UVU Login Service</span>
+
+					</a></p>
+                  </div>
+                  <div class="clearfloat"></div>
+               </div>
+               <div class="clearfloat"></div>
+               <div id="deptNavBar">
+
+               </div>
+               <div class="clearfloat"></div>
+               <div id="slideMenuSep"></div>
+            </div>
+            <div class="contentArea">
+
+			<!-- END TOP -->
+
+
+
+
+<!-- main content -->
+<div class="main section col-xs-12">
+    <iframe src="//my.uvu.edu/_resources/codex/login-info.html" width="100%" class="noScale"></iframe>
+
+	<!-- not secure -->
+	
+	
+	<div class="login graybox">
+		<form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=9CA34AD7A30EC551C9B2142357BA3303" method="post">
+			
+				
+					<h2>UVU Login Service</h2>
+				
+				
+			
+			
+				
+				<div class="form-group">
+					<label for="username"><span class="accesskey">U</span>V ID:</label>
+					
+
+					
+						
+						<input id="username" name="username" class="required form-control" tabindex="1" autofocus="autofocus" accesskey="u" type="text" value="" size="25" autocomplete="false"/>
+                        <a class="helplinks right" href="https://cas.uvu.edu/idlookup/id/lookup">UV ID Lookup</a>
+					
+				</div>
+				<div class="form-group">
+					<label for="password"><span class="accesskey">P</span>assword:</label>
+					
+					<input id="password" name="password" class="required form-control" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    <a class="helplinks right" href="https://iam.uvu.edu/pwm/public/ForgottenPassword">Forgot Your Password</a>
+				</div>
+				
+				<input type="hidden" name="lt" value="LT-19443693-a44bf1zq0N4wSIxxnmqtaQcAOnrz3z" />
+				<input type="hidden" name="execution" value="e1s1" />
+				<input type="hidden" name="_eventId" value="submit" />
+
+				<input class="submit btn btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="3" type="submit" />
+            <a class="helplinks center" href="http://www.uvu.edu/servicedesk">Get Additional Technical Support</a>
+		</form>
+	</div>
+
+</div>
+
+
+    
+        <div class="clearfloat"></div>
+
+        </div>
+        <div id="footer">
+            <div id="footerDept">
+                <span>IT SERVICE DESK</span> | <span><a href="mailto:servicedesk@uvu.edu">servicedesk@uvu.edu</a></span> | <span>801.863.8888</span> | <span>ROOM BA-007</span>
+                    <div class="clearfloat"></div>
+            </div>
+            <div class="fadeSep"></div>
+            <div id="footerSchool">
+                <div class="footerAddress">
+<div class="footinfowrap"><a title="Utah Valley University" href="http://maps.google.com/?ll=40.278969,-111.717825&amp;spn=0.019579,0.033388&amp;t=m&amp;z=15"><span class="addressText">800&nbsp;West&nbsp;University&nbsp;Parkway,&nbsp;Orem,&nbsp;UT&nbsp;84058</span></a> <span class="addressText" title="Service Desk">(801)&nbsp;863-8888</span> <a href="http://www.uvu.edu/legal/copyright/"><span class="addressText">Copyright&nbsp;&copy;&nbsp;2018</span></a> <a href="https://www.uvu.edu/legal/"><span class="addressText disclaimer">Disclaimers&nbsp;&amp;&nbsp;Legal</span></a>
+<h4><a href="http://www.uvu.edu">UTAH VALLEY UNIVERSITY</a></h4>
+</div>
+</div>
+
+            </div>
+            <div id="ob">
+                <a href="http://www.uvu.edu"></a>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+        <div id="footerShadow"></div>
+        </div>
+        </div>
+
+        <script type="text/javascript" src="js/cas.js;jsessionid=9CA34AD7A30EC551C9B2142357BA3303"></script>
+        <script type="text/javascript" src="js/iframeresizer.min.js;jsessionid=9CA34AD7A30EC551C9B2142357BA3303"></script>
+
+        <!--[if lt IE 9]>
+<script type="text/javascript" language="javascript" src="js/respond.js"> </script>
+<![endif]-->
+<script type="text/javascript" language="JavaScript" src="js/global.js">// <![CDATA[
+ 
+// ]]></script>
+<script type="text/javascript" src="https://use.typekit.net/bkl8wpg.js"></script>
+<script type="text/javascript">// <![CDATA[
+try{Typekit.load();}catch(e){}
+// ]]></script>
+
+        <script type="text/javascript">
+            var isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1); // Detect IE10 and below
+
+            iFrameResize({
+                heightCalculationMethod: isOldIE ? 'max' : 'lowestElement'
+            });
+        </script>
+
+        <script type="text/javascript" src="//www.uvu.edu/lib/js/casmyuvu.js"
+
+        </body>
+
+        </html>
+
+

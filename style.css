@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* Desktop CSS Document */
+/* Table of Contents:
+	1. Body and Wrapper
+	2. Global Header
+	3. Global Navigation
+	4. Department Navigation
+	5. Breadcrumbs
+	6. Main Content
+	7. Department Footer
+	8. Global Footer
+	9. Helpful Styles
+	10. OU-Campus Login
+	11. Desktop/Mobile-Only Content
+*/
+
+@media only screen and (min-width: 1100px) {
+
+/************ 1. Body and Wrapper ************/
+
+body {
+	background: url(images/bodyDiagPattern.png) #333 repeat-x top center;
+}
+
+#wrapper {
+	width: 1100px;
+	overflow: visible;
+}
+#lHeaderShadow, #rHeaderShadow {
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	height: 250px;
+	background: url(images/leftHeaderShadow.png) no-repeat 0 0;
+}
+#rHeaderShadow {
+	left: 1100px;
+	background: url(images/rightHeaderShadow.png) no-repeat 0 0;
+}
+
+/************ 2. Global Header ************/
+
+#header {
+	background-color:#FFF;
+}
+#searchAndLink {
+	height: auto;
+	padding: 20px 20px 15px 0;
+}
+#searchLinks {
+	clear: none;
+	float: left;
+	padding-top: 2px;
+}
+#searchForm {
+	margin: 0;		
+}
+#searchInputs {
+	clear: none;
+	float: left;
+}
+.searchSuggest {
+	width: 450px;
+}
+#mquery {
+	width:3px;
+}
+#logo a {
+	background: url(images/logo.png);
+}
+#pageTitle {
+	font-size: 225%;
+}	
+
+/************ 3. Global Navigation ************/
+
+#schoolNav {
+	margin-top: 5px;
+}
+	
+#universityNav {
+	margin-top: 5px;
+}	
+
+/************ 4. Department Navigation ************/
+
+/************ 5. Breadcrumbs ************/
+
+#breadCrumbContainer {
+	font-size: 10px;
+}
+.breadBag {
+	margin-left: -6px;
+	}
+.breadTie {
+	background-image: url(images/bread-tab-icon.png);
+	}
+
+/************ 6. Main Content ************/
+	
+	/*Large Left - Small middle and right column */
+.colrightsmall-top {
+	width: 100%;
+	padding-left: 2%;
+	float: right;
+}
+.colrightsmall-bottom {
+	width: 100%;
+	padding-left: 2%;
+	float: right;		
+}
+.colleftlarge {
+	width: 45%;
+	padding-left: 2%;
+	float: left;		
+}	
+.colmiddlesmall {
+	width: 24%;
+	padding-left: 2%;
+	float: left;		
+}	
+
+/*  END Large Left column styles  */
+
+
+/*  Equal Three column styles  */
+.rightcol_wrapper {
+	width: 24%;
+}
+.threecolright-top {
+	width: 100%;
+	float: right;		
+}
+.threecolright-bottom {
+	width: 100%;
+	padding-left: 0;
+	float: left;		
+}	
+.threecolleft {
+	width: 32%;
+	padding-left: 2%;
+	float: left;		
+}	
+.threecolmiddle {
+	width: 32%;
+	padding-left: 2%;
+	float: left;		
+}	
+/*  END Equal columns styles  */
+
+
+
+/************ 7. Department Footer ************/
+#footerDept > span, #footerDept > p > span {
+  padding: 0 2%;
+}
+
+/************ 8. Global Footer ************/
+
+#footerShadow {
+	width: 1100px;
+	height: 20px;
+	background: url(images/footerShadow.png) no-repeat top center;
+}
+
+.footerSocial {
+  float: left;
+  padding: 20px 2% 2%;
+  width: 25%;
+  margin-top: 2%;
+  margin-left: 0%;
+}
+
+.footerFirstcolumn{
+	
+	width: 15%;
+	padding: 0 20px;
+}
+	
+.footerColumns{
+		width: 15%;
+	padding: 0 20px;
+}
+
+
+
+
+/************ 9. Helpful Styles ************/
+
+/************ 10. OU-Campus Login ************/
+
+/************ 11. Desktop-Only Content ************/
+.mobileandtablet {
+	display: none;	
+	}
+}

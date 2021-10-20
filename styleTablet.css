@@ -1,0 +1,921 @@
+@charset "utf-8";
+/* Tablet CSS Document */
+/* Table of Contents:
+	1. Body and Wrapper
+	2. Global Header
+	3. Global Navigation
+	4. Department Navigation
+	5. Breadcrumbs
+	6. Main Content
+	7. Department Footer
+	8. Global Footer
+	9. Helpful Styles
+	10. OU-Campus Login
+	11. Desktop/Mobile-Only Content
+	12. Responsive Tables
+	13. WDS Form Styles
+*/
+
+@media only screen and (min-width: 760px) {
+
+/************ 1. Body and Wrapper ************/
+
+#wrapper{
+	background-image: none;
+}
+
+#container {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+ol {
+	padding-left:30px;
+}
+
+/************ 2. Global Header ************/
+
+.js #searchMobile ~ #searchAndNav,
+.js #searchMobile:hover ~ #searchAndNav,
+.js #searchMobile ~ #searchAndNav > #schoolNav > ul > li:first-child,
+.js #searchMobile ~ #searchAndNav > #schoolNav > #collegesAndSchools {
+	display:block;
+}
+#header {
+	background: url(images/headerBack.png) #fff no-repeat top center;
+}
+#logoAndTitle {
+	height: 107px;
+	position: relative;
+	float: left;
+	width: 50%;
+}
+#mquery {
+	width:2px;
+}
+#logo {
+	padding: 25px;
+	margin-right: -115px;
+}
+#logo a {
+	background: url(images/tablet_logo.png) no-repeat 0 0;
+	width: 65px;
+	height: 57px;
+}
+#logo a:hover {
+	text-decoration: none;
+}
+#pageTitle{
+	font-size: 200%;
+	letter-spacing: 1px;
+	line-height: 100%;
+	height: 107px;
+	margin-left: 115px;
+
+	/* ie 7 hack */
+	*height: 67px;
+	*padding-top: 40px;
+}
+.wf-stratum1web-n1-active #pageTitle {
+	letter-spacing: 0; /* reset font after stratum loads */
+}
+#pageTitle ul{
+	padding: 0;
+	margin: 5px;
+	list-style: none;
+	height: 10px;
+	overflow: hidden;
+}
+#pageTitle ul li{
+	float: left;
+}
+#searchAndNav {
+	float: right;
+	padding: 0px;
+	height: 107px;
+	max-width: 50%;
+	clear:none;
+	display:block;
+}
+.js #searchAndNav {
+	display:block;
+}
+#searchAndLink {
+	border-bottom: 1px solid #e4e4e4;
+	padding: 20px 20px 5px 0;
+	height: 42px;
+	display:block;
+}
+#searchInputs {
+	clear: both;
+	position: relative;
+	margin:0;
+}
+#searchForm {
+	float:  left;
+	display: block;
+	margin:0 0 0 30px;
+}
+#searchForm a {
+	text-decoration: none;
+	font-size: 11px;
+}
+#searchForm a:hover {
+	text-decoration: underline;
+}
+.searchSuggest{
+	width: 275px;
+}
+.uvsearchinput {
+	border: 1px solid #CCC;
+	color: #999;
+	height: 16px;
+	width: 150px;
+	font-size: 11px;
+	padding: 2px 3px;
+	margin:0;
+}
+.uvsearchinput:focus {
+	color: #000;
+}
+#uvsearchsubmit {
+	width: 21px;
+	height: 20px;
+	font-size: 0em;
+	border: none;
+	border-left: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	background: url(images/searchButton.png) no-repeat 0 0 transparent;
+	position: absolute;
+	left: 136px;
+	top: 1px;
+	cursor: pointer;
+}
+#uvsearchsubmit:hover {
+	background-position: 0 -20px;
+}
+#searchLinks {
+	clear: both;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin:0;
+}
+#searchMobile {
+	display: none;
+}
+#myUVU {
+	padding-left: 20px;
+	float: right;
+	margin:0;
+	background: none;
+	border: none;
+}
+#myUVU a {
+	background: url(images/myuvu.png) no-repeat 0 0;
+	display: block;
+	width: 100px;
+    height: 28px;
+	margin: 0;
+}
+#myUVU a:hover {
+	background-position: 0 -28px;
+}
+	
+     
+
+/************ 3. Global Navigation ************/
+
+.dropNav {
+	background: inherit;
+	margin: 0px;
+	overflow: inherit;
+	cursor: default;
+}
+.dropNav ul {
+	display: block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dropNav > ul li {
+	display:block;
+}
+.dropNav > ul > li {
+	float: left;
+}
+.dropNav a, .dropNav span {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+.dropNav div {
+	position:  absolute;
+	display: none;
+}
+.dropNav > ul > li > ul {
+	position:  absolute;
+	display: none;
+}
+/*.dropNav li:hover div {
+	display: block;
+	z-index: 10;
+}*/
+.dropNav ul li:hover ul, .dropNav ul li.open ul, .dropNav ul li.open div {
+	display: block;
+	z-index: 10;
+}				
+.dropNav ul li.closed ul, .dropNav ul li.closed div {
+	display: none;
+}
+.dropNav a:hover {
+	text-decoration: none;
+}
+.dropNav .drop_mobile {
+	margin:0;
+}
+.megaVertSep {
+	border-left: 1px solid #e4e4e4;
+	height: 18px;
+	margin-top: 10px;
+	display:block;
+	width:0;
+}
+#schoolNav {
+	float: right;
+	display:block;
+}
+#schoolNav > ul {
+	margin: 0px;
+}
+#schoolNav > ul > li.open {
+	background-color: #cecece;
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+}
+
+#universityLinks:hover > span, #collegesAndSchools:hover > span, #universityLinks.open > span, #collegesAndSchools.open > span   {
+	font-weight: bold;
+}
+
+#universityLinks:hover > span, #collegesAndSchools:hover > span {
+	cursor: pointer;
+}	
+	
+#schoolNav > ul > li.closed {
+	background-color: inherit;
+	box-shadow: none;
+}
+
+#universityLinks,
+#collegesAndSchools {
+	background-image: none;
+	min-height: 0px;
+	font-size: 12px;
+	list-style-image: none outside none;
+	background-image: none;
+	padding: 0;
+}
+#universityLinks > a,
+#universityLinks > span,
+#collegesAndSchools > a,
+#collegesAndSchools > span {
+	background: none;
+	border: none;
+}
+#universityLinks > div,
+#collegesAndSchools > div {
+    border-bottom: none;
+    margin: inherit;
+    padding: 0 10px;
+}
+#schoolNav > ul > li > a, #schoolNav > ul > li > span {
+	color: #275d38;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 15px;
+	height: 18px;
+}
+#schoolNav ul li h5 a {
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin: 0px;
+	padding: 10px 5px 0;
+	color: #275d38;
+}
+#schoolNav > ul {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:12px;
+	float: right;
+}
+#schoolNav div {
+	background: #cecece;
+	padding: 15px 0px;
+	width: 100%;
+	left: 0;
+	z-index:13;
+	-webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+}
+#schoolNav div ul {
+	float: left;
+	border-left: 1px solid #bd4832;
+	width:19%;
+}
+#schoolNav div ul:first-child {
+	border-left: none;
+}
+#schoolNav div li {
+	padding: 0px 10px;
+}
+#schoolNav div a {
+	font-size: 12px;
+	padding: 0 5px;
+	color: #000;
+	line-height: 1.4em;
+}
+#schoolNav div a:hover {
+	background-color: #eaeaea;
+}
+
+.megamenu_icon {
+	display:none;
+}
+
+
+/*University Link page */
+
+#universityNav {
+	float: left;
+}
+
+#universityNav li h5 a {
+	font-size: 15px;
+	margin: 0px;
+	color: #275d38;
+	list-style:none;
+	font-weight:bold;
+}
+#universityNav > ul {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:12px;
+	float: left;
+	list-style:none;
+	padding-right:30px;
+	padding-bottom:10px;
+	padding-left:1px;
+}
+#universityNav div {
+	width: 100%;
+	left: 0;
+	margin-top: 10px;
+
+}
+#universityNav div ul {
+	float: left;
+	border-left: 1px solid #bd4832;
+	width:19%;
+	list-style:none;
+}
+#universityNav div ul:first-child {
+	border-left: none;
+}
+#universityNav div li {
+	padding: 0px 10px;
+}
+#universityNav div a {
+	font-size: 12px;
+	padding: 0 5px;
+	color: #000;
+	line-height: 1.4em;
+}
+#universityNav div a:hover {
+	background-color: #eaeaea;
+}
+
+#universityLinks > ul > li {
+	display:block;
+}
+
+/*Colleges and Schools Link page */
+
+#collegeNav {
+	padding-top:3.2%;
+}
+
+#collegeNav li h5 a {
+	font-size: 15px;
+	margin: 0px;
+	color: #275d38;
+	list-style:none;
+	font-weight:bold;
+}
+#collegeNav > ul {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:12px;
+	float: left;
+	list-style:none;
+	padding-bottom:10px;
+	padding-left:1px;
+}
+#collegeNav div {
+	width: 100%;
+	left: 0;
+	margin-top: 10px;
+
+}
+
+#collegesAndSchools > ul > li {
+	display: block;
+}
+
+/************ 4. Department Navigation ************/
+
+#deptNavBar {
+	display: block;
+	background: url(images/dept-nav-back.png) #275d38 repeat-x 0 0;
+	padding: 0px;
+	min-height: 25px;
+	width: 100%;
+	clear: both;
+}
+#deptNav li {
+	position: relative;
+}
+#deptNav > ul {
+	width: 100%;
+}
+#deptNav > ul > li {
+	border-right:1px solid #98b576;
+	height:15px;
+	margin: 5px 0px;
+	position: relative;
+}
+#deptNav > ul > li > a, #deptNav > ul > li > span {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing:1px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding: 0px 10px;
+	height: 25px;
+	line-height:25px;
+	margin-top:-5px;
+}
+#deptNav > ul > li > a:visited {
+	color: #fff;	
+}
+#deptNav > ul > li > a:hover {
+	color: #fff;	
+}
+#deptNav > ul > li:last-child{
+	border-right: none;
+}
+#deptNav li:hover > a, #deptNav li.open > a, #deptNav li:hover > span, #deptNav li.open > span {
+	background-color: #636363;
+	color: #cecece;
+}
+#deptNav li:hover a, #deptNav li.open a {
+	color: #fff;
+}
+#deptNav li.closed > a, #deptNav li.closed > span {
+	background-color: inherit;
+}
+#deptNav ul li ul {
+	background-color: #636363;
+	padding: 5px;
+	width:250px;
+	top: 20px;
+	position: absolute;
+	z-index: 14;
+	-webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+}
+#deptNav ul li ul li:hover {
+	color: #fff;
+}
+#deptNav ul li ul li:hover a {
+	background-color: #434343;
+}
+#deptNav ul li ul li a{
+	font-weight: normal;
+	text-transform: none;
+	font-size: 12px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 5px;
+
+}
+#deptNav ul li ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #434343;
+	left: 250px;
+	top: 0px;
+}
+#deptNav ul li ul li:hover ul {
+	display: block;
+}
+#deptNav ul li ul li ul li a:hover {
+	background-color: #636363;
+}
+
+/* mobile menu bar */
+
+#slideMenuSep {
+	display: none;
+}
+
+/************ 5. Breadcrumbs ************/
+
+.breadBag {
+  display: block;
+  margin-left: -3px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.breadTie {
+  background: url("/images/bread-tab-icon-flat.png") no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  float: left;
+  height: 24px;
+  position: relative;
+  width: 31px;
+  z-index: 12;
+}
+.nativeHover:hover .loaf {
+	display:block;	/* natural hover fallback */
+}
+.nativeHover .loaf {
+	display: none;
+}
+.loaf {
+  float: left;
+  font-size: 12px;
+  list-style: none outside none;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  position: relative;
+}
+.loaf li {
+	position: relative;
+	background-color: white;
+	float: left;
+	height: 16px;
+	margin: 2px 0;
+
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+
+}
+.loaf li:first-of-type {
+
+}
+
+.loaf li a {
+  color: black;
+  display: block;
+  padding: 1px 10px 1px 18px;
+  text-decoration: none;
+}
+.loaf li:hover a {
+	color:#275d38;
+}
+.loaf li:after, .loaf li:before {
+  border: 2px solid transparent;
+  content: " ";
+  left: 100%;
+  position: absolute;
+}
+.loaf li:after {
+  border-left-color: #FFFFFF;
+  border-width: 8px;
+  top: 0;
+}
+.loaf li:before {
+  border-left-color: #275d38;
+  border-width: 10px;
+  top: -2px;
+}
+
+
+
+.slice1{z-index: 1 !important; }
+.slice2{z-index: 2 !important; }
+.slice3{z-index: 3 !important; }
+.slice4{z-index: 4 !important; }
+.slice5{z-index: 5 !important; }
+.slice6{z-index: 6 !important; }
+.slice7{z-index: 7 !important; }
+.slice8{z-index: 8 !important; }
+.slice9{z-index: 9 !important; }
+.slice10{z-index: 10 !important; }
+
+
+/************ 6. Main Content ************/
+
+/*  New two column styles  */
+
+.sidebarRight {
+  float: right;
+  height: 100%;
+  min-height: 215px;
+  width: 33%;
+}
+
+.bigLeft {
+  float: left;
+  min-height: 215px;
+  width: 65%;
+  margin-right: 2%;
+}
+.flexWrapLeft {
+	margin-right: 340px;
+}
+
+.sidebarLeft {
+  float: left;
+  height: 100%;
+  min-height: 215px;
+  width: 33%;
+}
+.bigRight {
+  float: right;
+  margin-left: 2%;
+  min-height: 215px;
+  width: 65%;
+}
+
+.halfLeft {
+	width: 48%;
+	padding-right: 2%;
+	float: left;
+}
+.halfRight {
+	width: 48%;
+	padding-left: 2%;
+	float: right;
+}
+
+/*  END New two column styles  */
+
+
+
+/*  Equal Three column styles  */
+.threecolright-top {
+  float: left;
+  width: 45%;
+}
+.rightcol_wrapper {
+  width: 100%;
+  padding-left: 2%;
+  float: left;
+}
+.threecolright-bottom {
+  float: left;
+  padding-left: 2%;
+  width: 45%;
+}
+.threecolleft {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+.threecolmiddle {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+/*  END Equal columns styles  */
+
+
+/*Large Left - Small middle and right column */
+.colrightsmall-top {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+
+}
+.colrightsmall-bottom {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+.colleftlarge {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+.colmiddlesmall {
+	width: 45%;
+	padding-left: 2%;
+	float: left;
+}
+
+/*  END Large Left column styles  */
+
+.contentArea {
+	padding: 20px;
+	font-size: 100%;
+}
+#sidebarRight {
+	float: right;
+	display: block;
+	height: 100%;
+	border-left: 1px solid #ccc;
+	min-height: 215px;
+	width: 33%;
+	padding-left:20px;
+}
+#sidebarLeft {
+	float: left;
+	display: block;
+	height: 100%;
+	border-right: 1px solid #ccc;
+	min-height: 215px;
+	width: 33%;
+	margin-right:20px;
+}
+#mainContent {
+	min-height: 215px;
+	float: left;
+	width:67.5%;
+	padding-right: 10px;
+}
+
+.formleft {
+	width: 25%;
+}
+
+#recaptcha {
+  margin: 0;
+}
+
+
+/************ 7. Department Footer ************/
+
+#footer {
+	background-color: #275d38;
+	padding: 0;
+}
+
+/************ 8. Global Footer ************/
+
+.footinfowrap {
+  float: left;
+  padding-left: 10%;
+  width: 80%;
+}
+
+.footerSocial {
+  float: left;
+  /*padding: 20px 2% 2% 4%;*/
+  width: 25%;
+  margin-top: 4%;
+  margin-left: -5%
+}
+
+.footerSocial img {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.footerFirstcolumn{
+	margin-left: 9%;
+	width: 18%;
+	padding: 0 20px;
+	text-align: left;
+}
+
+.footerColumns{
+	width: 18%;
+	padding: 0 20px;
+	text-align: left;
+}
+.footerColumns h4, .footerFirstcolumn h4 {
+	background-position: left bottom;
+}
+
+.addressText{
+	line-height: 4em;
+	}
+
+.disclaimer{
+	line-height: 4em;
+	}
+
+/************ 9. Helpful Styles ************/
+
+	
+	
+
+/************ 10. OU-Campus Login ************/
+#ob {
+  display: block;
+  float: right;
+  margin: 29px 0;
+  text-align: center;
+  width: 10%;
+}
+
+#ob a {
+  background: url(images/hpob.png) no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 16px;
+  text-decoration: none;
+  width: 51px;
+}
+
+
+
+
+/************ 11. Mobile-Only Content ************/
+
+
+.desktoponly {
+	display: inherit;
+}
+.mobileonly {
+	display :none;
+}
+
+.mobileandtablet {
+	display: inherit;
+	}
+
+
+/**************** 12. Responsive Tables ****************/
+
+.preTd {
+	display: none;
+	float:none;
+}
+.postTd {
+	width: inherit;
+	padding: inherit;
+	float:none;
+	padding-right: 5px;
+}
+.rightTd {
+	float:none;
+	width:100%;
+}
+table.heads  {
+	display:table;
+}
+.heads tbody {
+	display:table-row-group;
+}
+.heads th {
+	display:table-cell;
+}
+.heads td {
+	display:table-cell;
+}
+.heads tr, .heads .headsAdapt  {
+	display:table-row;
+}
+.heads .nohead {
+	display: none;
+}
+
+/**************** 13. WDS Form Styles ****************/
+
+.wds-form-style-grey, .wds-form-style-grey * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wds-form-style-grey label
+{
+	float: left;
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #6c6c6c;
+	clear: both;
+}
+.wds-form-style-grey input[type="text"], .wds-form-style-grey input[type="email"], .wds-form-style-grey textarea, .wds-form-style-grey select {
+    width: 68%;
+}
+.wds-form-style-grey .full-width{
+	width: 100%;
+	text-align: left;
+}
+.wds-form-style-grey p, .wds-form-style-grey h1, .wds-form-style-grey h2, .wds-form-style-grey h3, .wds-form-style-grey h4, .wds-form-style-grey h5, .wds-form-style-grey h6, .wds-form-style-grey br{
+    clear: both;		
+}
+}

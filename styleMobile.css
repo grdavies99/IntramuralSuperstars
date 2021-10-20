@@ -1,0 +1,1389 @@
+@charset "utf-8";
+/* Mobile CSS Document */
+/* Table of Contents:
+	0. Reset and Default Styles
+	1. Body and Wrapper
+	2. Global Header
+	3. Global Navigation
+	4. Department Navigation
+	5. Breadcrumbs
+	6. Main Content
+	7. Department Footer
+	8. Global Footer
+	9. Helpful Styles
+	10. OU-Campus Login
+	11. Desktop/Mobile-Only Content
+	12. Emergency Modal
+	13. Responsive Tables
+	16. Editor Styles Dropdown
+	17. myUVU Content-Only Fix
+	18. Clean Template Styles
+*/
+
+/************ 0. Reset Styles ************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+ul {
+	list-style-image: url(images/bullet.png);
+	padding-left: 20px;
+}
+ol	{
+	padding-left: 40px;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+:focus {
+	outline: 0;
+}
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } /* fix ios and ie7-8 font scaling issues */
+
+/* Default styles */
+
+h1{
+	font-family:"stratum-1-web","Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size:32px;
+	font-weight: 400;
+	padding-bottom:10px;
+	line-height:1em;
+
+
+}
+h2{
+	font-family:"stratum-1-web","Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size:24px;
+	color: #275d38;
+	padding-top: 20px;
+	font-weight: 500;
+	padding-bottom:10px;
+	line-height:1em;
+}
+h3{
+	font-family:"stratum-1-web","Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size:18px;
+	color: #275d38;
+	padding-top: 20px;
+	font-weight: 500;
+	padding-bottom:10px;
+	line-height:1em;
+}
+h4{
+	font-family:"stratum-1-web","Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size:15px;
+	color: #275d38;
+	padding-top: 20px;
+	font-weight: 500;
+	padding-bottom:10px;
+	line-height:1em;
+}
+a {
+	color: #275d38;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	padding: 0.5em 0px;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;	
+}
+
+/************ 1. Body and Wrapper ************/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.4em;
+	color: #000;
+	background: #e8e8e8;
+}
+
+#wrapper {
+	margin: 0px auto;
+	min-width: 320px;
+	overflow: hidden;
+	background-image: url("/images/lines_p25px.png");
+}
+#container {
+	position: relative;
+	min-height: 480px;
+	z-index: 4;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: -5px 0px 30px rgba(0,0,0,0.5);
+}
+
+/************ 2. Global Header ************/
+
+#header {
+	background: url(images/headerBackMobile.png) #fff repeat-x top center;
+	color: #4a6f1c;
+}
+#header a {
+	text-decoration: none;
+}
+#logoAndTitle {
+	float: left;
+	width: 80%;
+	/*background: url(images/university_header_repeat.jpg) repeat-x 0 0;*/
+}
+#pageTitle {
+	font-family: "stratum-1-web","Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size: 150%;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 70px;
+	line-height: 1em;
+	display: table;
+	height: 62px;
+
+	max-width: 100%; /* ie */
+	/* ie 7 hack */
+	*height: 42px;
+	*padding-top: 20px;
+}
+#pageTitle p {
+	margin: 0;
+	padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+}
+#myUVU {
+	margin: 0 -10px;
+	border-bottom: 3px solid #51731C;
+
+	background: #fff;
+	background: -moz-linear-gradient(top, #ffffff 60%, #ededf5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#ffffff), color-stop(100%,#ededf5));
+	background: -webkit-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: -ms-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: linear-gradient(to bottom, #ffffff 60%,#ededf5 100%);
+}
+
+#myUVU a {
+	background: url("/images/myuvu.png") no-repeat scroll 0 0 transparent;
+	width: 110px;
+	height: 28px;
+	display: block;
+	margin: 7px 5px
+}
+#myUVU a:hover {
+	background-position: 0 -28px;
+}
+#mquery {
+	opacity:0;
+	width:1px;
+	height:0px;
+	position:absolute;
+}
+#logo {
+	float: left;
+	padding: 10px;
+	margin-right: -70px;
+}
+#logo a {
+	background: url(images/mobile_logo.png) no-repeat 0 0;
+	width: 49px;
+	height: 42px;
+	display: block;
+}
+#searchAndNav {
+	padding: 10px;
+	display:none;
+	clear:both;
+}
+#searchAndNav:hover {
+	display:block;
+}
+#searchInputs {
+	margin:0 0 10px;
+}
+.searchResults ul {
+	list-style: none;
+	padding: 0 10px 10px;
+	margin: 0;
+}
+.searchResults li:nth-child(even){
+	background-color: #f8f8f8;
+}
+.searchResults a {
+	color: #00843D;
+	text-decoration: none;
+}
+.searchResults a:hover {
+	text-decoration: underline;
+}
+.searchResults p {
+	padding: 5px;
+	margin: 0;
+}
+.searchSuggest {
+	position: absolute;
+	z-index: 10;
+	border: 1px solid #ccc;
+	display: none;
+	overflow: hidden;
+	font-size: 11px;
+	color: #333;
+
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.35);
+}
+.searchSuggest a {
+	color: #00843D;
+	background-color: #fff;
+	padding: 3px;
+	display: block;
+}
+.searchSuggest a:nth-child(even) {
+	background-color: #f5f5f5;
+}
+.searchSuggest a.searchAlt {
+	background-color: #efffdd;
+}
+.searchSuggest a.searchAlt:nth-child(odd){
+	background-color: #dfedce;
+}
+.searchSuggest a.searchKeyword span {
+	color: #333;
+}
+.searchSuggest a.sponsoredKeyword span {
+	color: #B85920;
+}
+.searchSuggest a:hover, .searchSuggest a.searchSelect {
+	text-decoration: none !important;
+	background-color: #fff9c8 !important;
+}
+
+.searchSuggest span {
+	font-weight: bold;
+	font-size: 14px;
+	color: #333;
+}
+#searchMobile {
+	float: right;
+	display: block;
+	width: 34px;
+	height: 33px;
+	background: url("/images/mobile_drop.png") no-repeat scroll 5px 0 transparent;
+	margin-top:13px;
+	padding:8px;
+}
+
+/******Skip to Content Accessabilities*********/
+ #skip a {
+        position: absolute !important;
+        top: auto;
+        left: -10000px;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+    
+ #skip a:focus, 
+ {
+        position:static;
+		width:auto;
+		height:auto;
+    }
+ 
+
+
+/************ 3. Global Navigation ************/
+
+#slideMenu {
+	display: none;
+}
+#slideMenu {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #ffffff;
+}
+#slideMenu ul {
+	margin: 0px;
+	padding: 0px;
+	width: 260px;
+	list-style: none;
+	background: url("/images/lines_p25px.png") #e8e8e8;
+}
+#slideMenu li {
+	position: relative;
+	border:none;
+}
+#slideMenu a, #slideMenu span {
+	display: block;
+	min-height:27px;
+	padding: 5px;
+	color:#555;
+	font-size: 1.5em;
+	line-height: 1.4em;
+	text-decoration:none;
+	width: 205px;
+}
+#slideMenu > a{
+	color:#275d38;
+}
+#slideMenu > ul > li {
+	background-color: #ECECEC;
+	min-height: 41px;
+	border-bottom: 3px solid #275d38;
+
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e8), to(#d4d4d4));
+	background: -webkit-linear-gradient(#e8e8e8 0%, #d4d4d4 100%);
+	background: -moz-linear-gradient(#e8e8e8 0%, #d4d4d4 100%);
+	background: -o-linear-gradient(#e8e8e8 0%, #d4d4d4 100%);
+	background: linear-gradient(#e8e8e8 0%, #d4d4d4 100%);
+}
+#slideMenu > ul > li ul {
+	background-color:#ffffff;
+	background-image: none;
+	-moz-box-shadow: inset 0px 3px 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 3px 10px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 3px 10px rgba(0,0,0,0.5);
+}
+#slideMenu > ul > li > ul li{
+	border-top: 2px solid #D3D3D3;
+}
+#slideMenu > ul > li > ul li:hover{
+	background-color:#275d38;
+}
+#slideMenu > ul > li > ul li:hover a{
+	color: white;
+}
+#slideMenu > ul > li > ul > li > ul {
+	background-color: #333;
+}
+#slideMenu > ul > li > ul > li > a {
+	padding: 5px 15px;
+}
+#slideMenu > ul > li > ul > li > ul > li > a {
+	padding: 5px 25px;
+}
+#slideMenu .more, #slideMenu .less {
+	cursor: pointer;
+	padding: 0;
+	position: absolute;
+	left: 215px;
+	width: 45px;
+	height: 35px;
+	background-image:url("/images/mobile_menu_arrow_green.png");
+}
+#slideMenu .less {
+	background-position: 5px -35px;
+	background-image:url("/images/mobile_menu_arrow_green.png");
+}
+#slideMenu > ul > li:first-of-type{
+	border-top: 3px solid #275d38;
+}
+#searchMobile:hover {
+	cursor:pointer;
+}
+#searchMobile:hover ~ #searchAndNav {
+	display:block;
+}
+.js #searchMobile:hover ~ #searchAndNav {
+	display:none;
+}
+.dropNav > ul li {
+	display: none;
+}
+.dropNav .drop_mobile {
+	display: block;
+	border-bottom:1px solid #CCCCCC;
+	margin: 0 -29px;
+    padding: 7px 41px;
+}
+#universityLinks, #collegesAndSchools {
+	list-style-image: none outside none;
+    font-size: 15px;
+    min-height: 34px;
+    text-transform: uppercase;
+	display:block;
+}
+#universityLinks > a, #collegesAndSchools > a, #universityLinks > span, #collegesAndSchools > span {
+	display: block;
+	padding: 10px 20px 10px 40px;
+	border-bottom: 3px solid #51731C;
+
+	background: url(images/cs_icon.png) no-repeat 5px center #fff;
+	background: url(images/cs_icon.png) no-repeat 5px center, -moz-linear-gradient(top, #ffffff 60%, #ededf5 100%);
+	background: url(images/cs_icon.png) no-repeat 5px center, -webkit-gradient(linear, left top, left bottom, color-stop(60%,#ffffff), color-stop(100%,#ededf5));
+	background: url(images/cs_icon.png) no-repeat 5px center, -webkit-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: url(images/cs_icon.png) no-repeat 5px center, -ms-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: url(images/cs_icon.png) no-repeat 5px center, linear-gradient(to bottom, #ffffff 60%,#ededf5 100%);
+
+}
+#universityLinks > a, #universityLinks > span {
+	background: url(images/ul_icon.png) no-repeat 5px center #fff;
+	background: url(images/ul_icon.png) no-repeat 5px center, -moz-linear-gradient(top, #ffffff 60%, #ededf5 100%);
+	background: url(images/ul_icon.png) no-repeat 5px center, -webkit-gradient(linear, left top, left bottom, color-stop(60%,#ffffff), color-stop(100%,#ededf5));
+	background: url(images/ul_icon.png) no-repeat 5px center, -webkit-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: url(images/ul_icon.png) no-repeat 5px center, -ms-linear-gradient(top, #ffffff 60%,#ededf5 100%);
+	background: url(images/ul_icon.png) no-repeat 5px center, linear-gradient(to bottom, #ffffff 60%,#ededf5 100%);
+}
+#universityLinks > div, #collegesAndSchools > div {
+	padding: 7px 10px;
+	text-transform: none;
+}
+#schoolNav > ul {
+	margin: 0 -10px;
+    padding-left: 0;
+}
+.js #searchAndNav {
+	display:none;
+}
+#searchLinks {
+	text-align:center;
+	margin: -8px 0 0;
+}
+.uvsearchinput {
+    border: 1px solid #CCCCCC;
+    color: #999999;
+    font-size: 11px;
+    height: 25px;
+    margin-top: 10px;
+    padding: 2px 0;
+	width:86%;
+}
+#uvsearchsubmit {
+	border-image: none;
+	border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #CCCCCC;
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/images/mobile_search.png") no-repeat scroll 0 0 transparent;
+    border-style: none none none solid;
+    border-width: inherit;
+    cursor: pointer;
+    font-size: 0;
+    height: 33px;
+    margin: 0;
+    padding: 10px 0 0;
+	width:12%;
+}
+
+/************ 4. Department Navigation ************/
+
+#deptNavBar {
+	display: none;
+}
+#slideMenuSep {
+	background-color: #275d38;
+	padding: 5px;
+
+	background: url(images/dept-nav-back.png) #275d38 repeat-x 0 0;
+}
+#slideMenuButton {
+	color: #fff;
+	display: block;
+	height: 28px;
+	width: 30px;
+	padding: 12px 10px 0 60px;
+	background-image: url(images/slideMenuButton.png);
+	background-repeat: no-repeat;
+	font-size: 1.5em;
+}
+
+/************ 5. Breadcrumbs ************/
+
+.breadBag {
+	display: none;
+}
+
+#slideMenu > .breadBag {
+	background-color: #ffffff;
+	display: block;
+	min-height: 20px;
+}
+#slideMenu > .breadBag > .breadTie, #slideMenu > .breadBag > .loaf {
+
+}
+
+#slideMenu > .breadBag > .breadTie {
+	background-image: url(images/bcbutton.png);
+	width: 29px;
+	height: 20px;
+	margin: 10px;
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+}
+
+#slideMenu > .breadBag > .loaf  > li > a {
+	color: #547629;
+	font-size: 12px;
+	padding: 0;
+}
+
+#slideMenu > .breadBag > .loaf  {
+	list-style-type: none;
+	background: url(images/bcvline.png) repeat-y;
+	margin: -20px 0 10px 40px;
+	padding: 0;
+}
+
+#slideMenu > .breadBag > .loaf  > li {
+	margin: 0;
+	padding: 0 12px;
+	line-height: 20px;
+	background: url(images/bcnode.png) no-repeat;
+	border: none;
+
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+#slideMenu > .breadBag > .loaf  > li:last-child {
+	background: #fff url(images/bclastnode.png) no-repeat;
+}
+
+#slideMenu > .breadBag > .loaf  > li:first-child {
+	background: #fff url(images/bcfirstnode.png) no-repeat;
+}
+
+/************ 6. Main Content ************/
+
+.contentArea {
+	background-color: #fff;
+	overflow: hidden;
+	padding: 7px;
+	min-height: 225px;
+	font-size: 150%;
+	line-height: 1.4em;
+}
+.contentArea img {
+	max-width: 100%;
+	height: auto !important;
+}
+.formleft {
+  float: left;
+  width: 45%;
+}
+
+#recaptcha {
+  margin: -8px;
+}
+#universityNav div {
+	width: 100%;
+	left: 0;
+	height:1px;
+
+}
+
+#collegeNav div {
+	width: 100%;
+	left: 0;
+	height:1px;
+
+}
+
+#footer {
+	font-size: 10px;
+	text-align: center;
+	background-color: #fff;
+}
+
+/************ 7. Department Footer ************/
+
+
+#footerDept {
+	background: #eaebec; /* Old browsers */
+	background: -moz-linear-gradient(top, #eaebec 0%, #ffffff 61%, #fbfbfb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaebec), color-stop(61%,#ffffff), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eaebec 0%,#ffffff 61%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eaebec 0%,#ffffff 61%,#fbfbfb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eaebec 0%,#ffffff 61%,#fbfbfb 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #eaebec 0%,#ffffff 61%,#fbfbfb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaebec', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */
+	color:#616263;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 20px;
+	line-height: 1.25em;
+}
+
+#footerDept > span, #footerDept > p > span {
+  padding: 0 1%;
+  line-height: 1.5em;
+}
+
+#footerDept a {
+ /* color: #616263;*/
+	color:#656669;
+  text-decoration: none;
+}
+
+.fadeSep {
+	height: 1px;
+	background: url(images/deptFooterBack.png) #fff top center;
+}
+
+/************ 8. Global Footer ************/
+
+#footerSchool {
+	box-shadow: 0 4px 4px -4px #586930 inset;
+	-moz-box-shadow: 0 4px 4px -4px #586930 inset;
+	-webkit-box-shadow: 0 4px 4px -4px #586930 inset;
+	/*background: rgb(89,107,49); /* Old browsers */
+/*background: -moz-linear-gradient(top,  rgba(89,107,49,1) 0%, rgba(110,133,64,1) 4%, rgba(120,141,78,1) 19%); /* FF3.6+ */
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(89,107,49,1)), color-stop(4%,rgba(110,133,64,1)), color-stop(19%,rgba(120,141,78,1))); /* Chrome,Safari4+ */
+/*background: -webkit-linear-gradient(top,  rgba(89,107,49,1) 0%,rgba(110,133,64,1) 4%,rgba(120,141,78,1) 19%); /* Chrome10+,Safari5.1+ */
+/*background: -o-linear-gradient(top,  rgba(89,107,49,1) 0%,rgba(110,133,64,1) 4%,rgba(120,141,78,1) 19%); /* Opera 11.10+ */
+/*background: -ms-linear-gradient(top,  rgba(89,107,49,1) 0%,rgba(110,133,64,1) 4%,rgba(120,141,78,1) 19%); /* IE10+ */
+/*background: linear-gradient(to bottom,  rgba(89,107,49,1) 0%,rgba(110,133,64,1) 4%,rgba(120,141,78,1) 19%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#596b31', endColorstr='#788d4e',GradientType=0 ); /* IE6-9 */
+
+
+	padding: 15px 0 0;
+	font-size: 12px;
+	line-height: 1em;
+	background-color: #336643;
+
+}
+#footerSchool p {
+	padding: 9px 0;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+
+#footerSchool p a{
+    text-decoration: none;
+	color: #ffffff;
+}
+#footerSchool p a:hover{
+	text-decoration: underline;
+}
+
+#footerSchool h4 {
+  color: #FFFFFF;
+}
+
+.footerAddress{
+	background-color: #275d38;
+	margin-top: 20px;
+}
+
+.footerAddress h4{
+	padding-top: 0px;
+	}
+
+.footerAddress h4 a{
+	letter-spacing: 3px;
+	font-size: 17px;
+	color: #ffffff;
+	padding-top: 0px;
+	text-decoration: none;
+}
+
+.addressText{
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 2em;
+	border-right: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.addressText a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.footinfowrap a{
+	text-decoration: none;
+	color: #ffffff;
+	}
+
+.disclaimer{
+	border-right: none;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 2em;
+	color: #ffffff;
+}
+
+.disclaimer a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.rights{
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #ffffff;
+}
+
+.rights a{
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.footerColumns, .footerFirstcolumn {
+	float: left;
+	text-align: center;
+	padding: 0px;
+	width: 100%;
+}
+
+.footerColumns h4, .footerFirstcolumn h4 {
+	font-family: "stratum-1-web", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 15.14px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	font-weight: 600;
+	color: #ffffff;
+	letter-spacing: 1px;
+	background: url("/images/foot-sep-bar.jpg") no-repeat;
+	background-position: center bottom;
+}
+
+.footerSocial {
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footerSocial a{
+	display: inline;
+	padding: 0 4px 0 4px;
+}
+
+.footerSocial a{
+	display: inline-block;
+	margin: 5px;
+}
+/*.footerSocial a.twitter {
+	background: url(images/twitter.png) no-repeat 0 0 transparent;
+}
+.footerSocial a.facebook {
+	background: url(images/facebook.png) no-repeat 0 0 transparent;
+}
+.footerSocial a.youtube {
+	background: url(images/youtube.png) no-repeat 0 0 transparent;
+}
+.footerSocial a:hover {
+	background-position: 0 -50px;
+}
+*/
+
+/************ 9. Helpful Styles ************/
+
+.clearfloat {
+	clear: both;
+}
+.odd, .even {
+	padding: 10px;
+	background-color: #fff;
+}
+.even {
+	background-color: #f5f5f5;
+}
+.transition {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+/**** Set Cursor for Title in Accordion Snippet to Cursor *****/
+.accordion{
+	cursor: pointer;
+}
+
+/************ 10. OU-Campus Login ************/
+
+#ob {
+	display: none;
+}
+
+/************ 11. Desktop/Mobile Only Visible Content ************/
+
+.desktoponly {
+	display: none;
+}
+
+
+.mobileonly {
+	display: inherit;
+}
+
+.mobileandtablet {
+	display: block;
+	}
+
+/* bug fixes */
+.ox-regioneditbutton {
+	position: absolute;
+	z-index: 10;
+}
+
+
+/************ 12. Emergency Modal ************/
+
+#basic-modal-content {
+	background-color:#6d1706;
+	padding:10px;
+	box-shadow: 1px 1px 5px #888888;
+	z-index: 2;
+	position: relative;
+}
+#basic-modal-content a {
+	color: #ffffff;
+	font-weight:bold;
+}
+
+#emergency h2 {
+	color:#ffffff;
+	font-size:22px;
+	font-family: "stratum-1-web", arial, sans-serif;
+	text-transform: uppercase;
+	padding:0px;
+}
+#emergency p {
+	float:left;
+	vertical-align:middle;
+	color:#ffffff;
+}
+
+#emergency img {
+	display:none;
+
+}
+
+
+#continue {
+	display:none;
+}
+
+/**************** 13. Responsive Tables *****************/
+
+table.heads  {
+	width:auto%;
+}
+/* Force table to not be like tables anymore */
+table.heads, .heads thead, .heads tbody, .heads th, .heads td, .heads tr {
+	display: block;
+}
+.heads td {
+	/* Behave  like a "row" */
+	border: 1px solid #eee;
+	position: relative;
+	padding-left: 2%;
+}
+.heads .headsAdapt{
+	display:none;
+}
+.preTd {
+	float:left;
+	padding-top: 0;
+	width: 30%;
+}
+.postTd {
+	float: left;
+    width: 100%;
+}
+.rightTd {
+  float: left;
+  width: 70%;
+}
+.nohead, .nohead > td {
+	border:none;
+	clear: both;
+}
+.heads td {
+	padding-left: 0;
+}
+
+/****************** 14. honey pot **********************/
+#honey_pot, #honeypot, label[for=honeypot], label[for=honey_pot] {
+	display:none;
+}
+/****************** 14. Form styles **********************/
+.error{
+	color:red;
+}
+
+/* WDS FORM STYLE GREY*/
+.wds-form-style-grey {
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #6c6c6c;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
+
+.wds-form-style-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+}
+
+.wds-form-style-grey label {
+    display: block;
+    margin: 0px;
+}
+
+.wds-form-style-grey input[type="text"], .wds-form-style-grey input[type="email"], .wds-form-style-grey textarea, .wds-form-style-grey select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.wds-form-style-grey textarea{
+    padding: 5px 3px 3px 5px;
+}
+.wds-form-style-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right);
+    appearance:none;
+    -webkit-appearance:none; 
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+.wds-form-style-grey textarea{
+    height:100px;
+}
+.wds-form-style-grey input[type="radio"] {
+    margin-top: 30px !important;
+}
+
+
+
+/****************** 15. Gallery, Random, Modal and Tableau styles ******************/
+.gallery {
+	display: block;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+.gallery:after {
+	content: ' ';
+	display: table;
+	clear: both;
+}
+.gallery li {
+	list-style: none;
+	float: left;
+	padding: 10px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.gallery li.clearfloat {
+	float: none;
+}
+.gallery a {
+	display: block;
+	text-decoration: none;
+}
+.gallery .title {
+	display: block;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+/* random image */
+.randomImage {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.randomImage li {
+	display: none;
+}
+.randomImage li:first-child {
+	display: block;
+}
+.randomImage .caption {
+	line-height: 1.25em;
+}
+.randomImage .caption .title {
+	font-weight: bold;
+	display: block;
+}
+/* modal */
+.cModalBack {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+	display: none;
+	opacity: 0;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.90);
+	
+	-webkit-transform: scale(0.9,0.9);
+	   -moz-transform: scale(0.9,0.9);
+	    -ms-transform: scale(0.9,0.9);
+	     -o-transform: scale(0.9,0.9);
+	        transform: scale(0.9,0.9);	
+}
+.cModalWrap {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.cModalCont {
+	position: relative;
+	display: inline-block;
+	width: 90%;
+	height: auto;
+	max-height: 90%;
+	vertical-align: middle;
+}
+.cModalShadow {
+	-webkit-box-shadow: 0 2px 20px #000;
+	-moz-box-shadow: 0 2px 20px #000;
+	box-shadow: 0 2px 20px #000;
+}
+.cModalCont img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.cModalFullHeight {
+	height: 90%;
+}
+.cModalIn {
+	height: 100%;
+}
+.cModalItem {
+	height: 100%;
+	max-width: 100%;
+	margin: auto;
+	padding: 0 10px;
+}
+.cModalItem > img, .cModalItem iframe {
+	-webkit-box-shadow: 0 5px 20px #000;
+	box-shadow: 0 5px 20px #000;
+}
+.cModalItem .caption > p,
+.cModalItem .caption > h2 {
+	color: #fff;
+}
+.cModalClose {
+	height: 30px;
+	width: 30px;
+	background: url(images/modal_close.png) 0 0 transparent;
+	cursor: pointer;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+}
+.cModalClose:hover {
+	background-position: 0 30px;
+}
+.cModalAnim {
+	-webkit-transform-origin: 50% 50%;
+	   -moz-transform-origin: 50% 50%;
+	    -ms-transform-origin: 50% 50%;
+	     -o-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+
+	-webkit-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	   -moz-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	    -ms-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	     -o-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	        transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+.cModalSmall {
+	-webkit-transform: scale(0.9,0.9);
+	   -moz-transform: scale(0.9,0.9);
+	    -ms-transform: scale(0.9,0.9);
+	     -o-transform: scale(0.9,0.9);
+	        transform: scale(0.9,0.9);
+
+/*	-webkit-filter: blur(2px);
+	   -moz-filter: blur(2px);
+	    -ms-filter: blur(2px);
+	     -o-filter: blur(2px);
+	        filter: blur(2px);
+*/
+}
+.cModalBig {
+	opacity: 1;
+	-webkit-transform: scale(1,1);
+	   -moz-transform: scale(1,1);
+	    -ms-transform: scale(1,1);
+	     -o-transform: scale(1,1);
+	        transform: scale(1,1);
+
+}
+/* tableau view */
+.tableauViz {
+    border: medium none;
+    display: block;
+    margin: 0;
+    height: 800px;
+    padding: 0;
+    width: 100%;
+}
+
+/*Transform-Accordion Default Styles*/
+.transformAccordion h1, .transformAccordion h2, .transformAccordion h3, .transformAccordion h4, .transformAccordion h5{
+	padding: 0px;
+	margin: 0px;
+	color: #000000;
+}
+
+.transformAccordion{
+	background-color: #eee;
+	padding: 12px;
+	border-radius: 12px;
+	font-size: 16px;
+	background-image: url('/images/downarrow2.png');
+	background-repeat: no-repeat;
+	background-position: 1% 50%;
+	padding-left: 39px;
+	margin-bottom: 10px;
+}
+
+.transformAccordion.open{
+	background-image: url('/images/uparrow2.png')
+}
+
+
+.transformAccordionContent{
+	padding: 0px 10px 20px 10px;	
+}
+
+
+
+
+
+
+/*SNIPPET -- Transform-Accordion STYLE #2*/
+.transformAccordion2 h1, .transformAccordion2 h2, .transformAccordion2 h3, .transformAccordion2 h4, .transformAccordion2 h5{
+    color: #f2f2f2;
+    padding: 0px 0px 0px 30px;
+    position: relative;
+	line-height: 20px;
+}
+
+
+.transformAccordion2 h1:before, .transformAccordion2 h2:before, .transformAccordion2 h3:before, .transformAccordion2 h4:before, .transformAccordion2 h5:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f2f2f2;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+
+.transformAccordion2 {
+    background-color: #005C2B;
+    border-radius: 0px;
+    padding: 10px;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.6);
+    background-image: none;
+	margin-bottom: 10px;
+}
+
+.transformAccordion2.open {
+    background-image: none;
+}
+	
+.transformAccordion2.open h1:before, .transformAccordion2.open h2:before, .transformAccordion2.open h3:before, .transformAccordion2.open h4:before, .transformAccordion2.open h5:before {
+    border-bottom: 10px solid #f2f2f2;
+    border-top: 0px;
+}
+
+
+
+/*UL Arrow Styles*/
+
+.ul-arrow{
+	list-style-type: none;
+	list-style-image: none;
+}
+
+.ul-arrow li{
+	line-height: 25px;
+	position: relative;
+}
+
+.ul-arrow > li::before {
+        content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 7px solid #005C2B;
+    border-bottom: 5px solid transparent;
+    left: -11px;
+    top: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SNIPPET -- Transform-Faculty Default Styles*/
+
+.tt-faculty-table div{
+	padding: 10px;
+}
+
+.tt-faculty-table img{
+	display: block;
+	margin: auto;
+}
+
+/****************** 16. Styles Editor DropDown Options ******************/
+
+.img-rounded{
+    border-radius: 4px;
+}
+
+.img-circle{
+	border-radius: 50%
+}
+
+.img-border{
+	border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+	padding: 3px;
+}
+
+.global-highlight-yellow, .global-highlight-green, .global-highlight-red{
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.global-highlight-yellow{
+	background-color: #fcf8e3;
+    border-left: 3px solid #f0ad4e;
+}
+
+.global-highlight-green{
+	background-color: #dff0d8;
+    border-left: 3px solid #5cb85c;
+}
+
+.global-highlight-red{
+	background-color: #f2dede;
+    border-left: 3px solid #c9302c;
+}
+
+.global-telephone, .global-email{
+	display: block;
+	padding: 3px 3px 3px 20px ;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.global-telephone{
+	background-image: url('/images/telephone.png');
+	color: #ec971f;
+}
+
+.global-email{
+	background-image: url('/images/email.png');
+}
+
+.btn a{
+	text-decoration: none;
+}
+
+.btn-success a, .btn-warning a{
+	color: white;	
+}
+
+.btn-default a{
+	color: black;
+}
+
+/************ 17. myUVU Content-Only fix ************/
+body.contentOnly #searchMobile, body.contentOnly #lHeaderShadow, body.contentOnly #lHeaderShadow, body.contentOnly #logoAndTitle, body.contentOnly #searchAndNav, body.contentOnly #footer{
+	display:none !important;
+}
+
+/************* 18. Clean Template Styles **************/
+#wrapper.clean-template #footerSchool{
+	padding:0;
+}
+
+#wrapper.clean-template .footerAddress {
+    margin: 0;
+}
