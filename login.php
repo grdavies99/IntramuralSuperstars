@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) {
     header('Location: index.php');
 } else {
     // if the query returns no result, redirect the user to the login page
-    header('Location: login.php?errors=Your Username or password was incorrect');
+    header('Location: index.php?errors=Your Username or password was incorrect');
 }
 
 ?>

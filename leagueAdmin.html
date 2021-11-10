@@ -3,25 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League</title>
+	<title>League Editor</title>
+	
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Current league teams and member numbers -->
-    <h1>League Teams</h1>
-	<ol>
-		<li>Team 1<button>Remove Team</button></li>
-		<li>Team 2<button>Remove Team</button></li>
-		<li>Team 3<button>Remove Team</button></li>
-		<li>Team 4<button>Remove Team</button></li>
-		<li>Team 5<button>Remove Team</button></li>
-		<li>Team 6<button>Remove Team</button></li>
-	</ol>
-
-	<br>
-
-<!-- New team input -->
-	<h2>Create New Team<h2>
-		<p>Input the name of the new team</p>
-    		<input type="textbox" placeholder="Team Name"><button>Add Team</button>
+<!--Banner with page links -->
+		<h1>Welcome!</h1>
+		<a href="myLeague.html">My League</a>
+		<br><br>
+		<a href="teamPage.html">My Team</a>
+		<br><br>
+		<a href="joinTeamForm.html">Join a Team</a>
+		<p>Admins only:
+		<a href="leagueAdmin.html">League Editor</a></p>
+		<hr>
+		
+<!-- Current league teams and number of members - option to remove team -->
+    <h2>League Teams</h2>
+		<ul>
+			<li>Example: Wolverines
+			<li>Example: Cougars
+			<li>Example: Utes
+			<li>Example: Permanent Undergraduates
+			<li>Example: Construction Workers
+			<li>Example: Spooky Boys
+		</ul>
+<!-- Option to remove a team -->
+		<p>Remove team?
+			<br>
+			<label for="RemoveTeam">Choose Team(Note: This cannot be reversed):</label>
+				<select name="Team" id="Team">
+				<option value="1">Example1</option>
+				<option value="2">Example2</option>
+				<option value="3">Example3</option>
+				<option value="4">Example4</option>
+				<option value="5">Example5</option>
+				<option value="6">Example6</option>
+				</select>
+			<br>
+<!-- Remove team submission button -->	
+				<input type="submit">
+		</p>
+	<hr>
+<!-- New team input, includes name of team, number of players, and captain information -->
+	<h2>Create New Team:</h2>
+	<form action="/action_page.php"> <!-- IMPORTANT!! THIS IS FORM PAGE, CHANGE NAME IF DIFFERENT!! -->
+<!-- Team name input -->
+		<p>Input the team name:
+			<input type="textbox" placeholder="Ex: Wolverines"></p>
+<!-- Number of players dropdown box -->
+			<label for="players">Choose the number of players:</label>
+				<select name="players" id="players">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				</select>
+			<br>
+<!-- Team Captain information fill in -->
+		<h3>Team Captain Information</h3>
+			<p>
+			Name:
+			<input type="textbox" placeholder="Ex: John Doe">
+			<br><br>
+			Phone:
+			<input type="textbox" placeholder="Ex: 555-555-5555">
+			<br><br>
+			UVU id:
+			<input type="textbox" placeholder="Ex: 12345678">
+			</p>
+			
+<!-- Submit and reset buttons -->
+			<input type="submit">
+			&nbsp
+			<input type="reset">	
+			
+<!-- Return home -->
+	<hr>
+	<a href="home.html">Return</a>
 </body>
 </html>

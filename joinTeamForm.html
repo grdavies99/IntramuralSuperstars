@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team Signup</title>
+	
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Join team form, this should auto populate to the server and student team -->
+	<h1>Join Team</h1>
+	<form action="/action_page.php"> <!-- Form begins here! -->
+		<p>If you are interested in joining a team, please fill out the information below:
+		<br><br>
+			<label for="JoinTeam">Choose Team:</label>
+				<select name="Team" id="Team">
+				<option value="1">Wolverines</option>
+				<option value="2">Cougars</option>
+				<option value="3">Utes</option>
+				<option value="4">Permanent Undergraduates</option>
+				<option value="5">Construction Workers</option>
+				<option value="6">Spooky Boys</option>
+				</select>
+			<br>
+		</p>
+			Name:
+				<input type="textbox" placeholder="Ex: John Doe">
+				<br><br>
+			UVU id:
+				<input type="textbox" placeholder="Ex: 12345678">
+			<br><br>
+<!-- Submit and reset buttons -->
+			<input type="submit">
+			&nbsp
+			<input type="reset">	
+	<hr>
+	<a href="home.html">Return</a>
+</body>
+</html>
