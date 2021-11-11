@@ -1,0 +1,28 @@
+<input type="submit" name="delete" value="delete"/>
+<!-- connect to the mariaDB database -->
+<?php
+$servername = "localhost";
+$username = "phpuser";
+$password = "pa55word";
+$dbname = "intramuel";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected Successfully";
+
+<input type="submit" name="delete" value="delete"/>
+  
+// sql to delete a record
+$sql = "DELETE FROM teaminfo WHERE id= '$value'";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+$conn->close();
+?>
