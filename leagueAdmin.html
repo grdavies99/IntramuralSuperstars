@@ -48,10 +48,10 @@
 	<hr>
 <!-- New team input, includes name of team, number of players, and captain information -->
 	<h2>Create New Team:</h2>
-	<form action="/action_page.php"> <!-- IMPORTANT!! THIS IS FORM PAGE, CHANGE NAME IF DIFFERENT!! -->
+	<form action="databaseform.php" method="post"> <!-- IMPORTANT!! THIS IS FORM PAGE, CHANGE NAME IF DIFFERENT!! -->
 <!-- Team name input -->
 		<p>Input the team name:
-			<input type="textbox" placeholder="Ex: Wolverines"></p>
+			<input type="textbox" placeholder="Ex: Wolverines" name="teamname"></p>
 <!-- Number of players dropdown box -->
 			<label for="players">Choose the number of players:</label>
 				<select name="players" id="players">
@@ -67,20 +67,21 @@
 		<h3>Team Captain Information</h3>
 			<p>
 			Name:
-			<input type="textbox" placeholder="Ex: John Doe">
+			<input type="textbox" placeholder="Ex: John Doe" name="captainname">
 			<br><br>
 			Phone:
-			<input type="textbox" placeholder="Ex: 555-555-5555">
+			<input type="textbox" placeholder="Ex: 555-555-5555" name="captainphone">
 			<br><br>
 			UVU id:
-			<input type="textbox" placeholder="Ex: 12345678">
+			<input type="textbox" placeholder="Ex: 12345678" name="captainid">
 			</p>
 			
 <!-- Submit and reset buttons -->
 			<input type="submit">
 			&nbsp
 			<input type="reset">	
-			
+	</form>
+
 <!-- Return home -->
 	<hr>
 	<a href="home.html">Return</a>
